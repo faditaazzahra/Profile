@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakil Pialang Berjangka (WPB) Profile</title>
+    <link rel="stylesheet" href="../../assets/style-responsive-profile.css">
+</head>
+
+<body>
+    <!-- Informasi Personal -->
+    <div class="personal-information">
+        <img src="../../assets/img/Dodi Candra.png" alt="Dodi Candra Firdaus">
+        <div class="employee-information">
+            <h1 class="employee-name">Dodi Candra Firdaus</h1>
+            <p class="employee-identity">384/UPTP/SI/12/2022</p>
+        </div>
+        <!-- <div class="sosial-media">
+            <a href="https://wa.me/6281222552534">
+                <img src="../../assets/img/whatsapp.png">
+            </a>
+            <a href="https://www.instagram.com/doddicandra?igsh=MWloZnZ6ZG55OG5yMA==">
+                <img src="../../assets/img/instagram.png">
+            </a>
+            <a href="mailto:dodicandrafirdaus@yahoo.com">
+                <img src="../../assets/img/mail.png">
+            </a>
+        </div> -->
+    </div>
+    
+    <hr class="divider">
+    
+    <!-- Bagian Statistik -->
+    <div class="stats-section">
+        <div class="stats-cards">
+            <!-- <h1>Lama Bekerja di EWF Cirebon</h1> -->
+            <h2>4 <span>Tahun</span></h2>
+            <p>Bekerja di EWF Cirebon</p>
+        </div>
+        <div class="stats-cards">
+            <!-- <h1>Nasabah yang Ditangani</h1> -->
+            <h2>43</h2>
+            <p>Nasabah yang Ditangani</p>
+        </div>
+        <div class="stats-cards">
+            <!-- <h1>Margin Terbesar</h1> -->
+            <h2>2 <span>Miliar</span></h2>
+            <p>Margin Terbesar</p>
+        </div>
+    </div>
+    
+    <!--- Jenjang Karir -->
+    <div class="text">
+        <h2>Jenjang Karir</h2>
+        <hr>
+    </div>
+    <div class="jenjang-karir">
+        <div class="jenjang-karir-cards col-6">
+            <div class="karir">
+                <h2>Business Consultant</h2>
+            </div>
+            <div class="tahun">
+                <p>2020</p>
+            </div>
+        </div>
+        <div class="jenjang-karir-cards col-6">
+            <div class="karir">
+                <h2>Senior Business Consultant</h2>
+            </div>
+            <div class="tahun">
+                <p>2020</p>
+            </div>
+        </div>
+        <div class="jenjang-karir-cards col-6">
+            <div class="karir">
+                <h2>Business Manager</h2>
+            </div>
+            <div class="tahun">
+                <p>2022</p>
+            </div>
+        </div>
+        <div class="jenjang-karir-cards col-6">
+            <div class="karir">
+                <h2>Senior Business Manager</h2>
+            </div>
+            <div class="tahun">
+                <p>2022</p>
+            </div>
+        </div>
+    </div>
+
+    <!--- Sertifikat --->
+    <div class="text">
+        <h2>Sertifikat Wakil Pialang Berjangka (WPB)</h2>
+        <hr>
+    </div>
+    <section id="wpb-certificates" class="certificate-section">
+        <div class="slider-container">
+            <div class="slider">
+                <img src="sertifikat/6. sertifikat an Dodi Candra_page-0001.jpg" alt="Sertifikat Aspebtindo">
+                <img src="sertifikat/6. Sertifikat JFX DODI CANDRA_page-0001.jpg" alt="Sertifikat JFX">
+            </div>
+            <!-- Buttons for navigating -->
+            <button class="prev" onclick="moveSlide(-1)">◄</button>
+            <button class="next" onclick="moveSlide(1)">►</button>
+        </div>
+    </section>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/6281222552534" class="whatsapp-float">
+        <img src="../../assets/img/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <script>
+        // Slider Sertifikat
+        let slideIndex = 0;
+    
+        function showSlides() {
+            const slides = document.querySelectorAll('.slider img');
+            slides.forEach((slide) => {
+                slide.style.display = 'none'; // Menyembunyikan semua gambar
+            });
+            slides[slideIndex].style.display = 'block'; // Menampilkan gambar saat ini
+        }
+    
+        function moveSlide(n) {
+            const slides = document.querySelectorAll('.slider img');
+            slideIndex += n;
+            if (slideIndex >= slides.length) {
+                slideIndex = 0; // Kembali ke awal jika sudah di slide terakhir
+            }
+            if (slideIndex < 0) {
+                slideIndex = slides.length - 1; // Pergi ke slide terakhir jika di slide pertama
+            }
+            showSlides();
+        }
+    
+        // Panggil fungsi showSlides() saat halaman pertama kali dimuat
+        window.onload = function() {
+            showSlides();  // Menampilkan gambar pertama langsung saat halaman dimuat
+        };
+    </script>    
+</body>
+</html>
